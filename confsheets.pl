@@ -140,6 +140,24 @@ while (<SITE>) {
 }
 close(SITE);
 print "END:Retrieving Site Config info\n";
+
+my %free_ts;
+print "Retrieving free Abis TS info\n";
+open my $ts_file, '<', $config{"OUTPUT_CSV"}."free_abis_ts.csv" || die "Cannot open ".$config{"OUTPUT_CSV"}."free_abis_ts.csv: $!\n";
+while (<$ts_file>) {
+	chomp;
+	if ($. == 1) {				#load header line
+		@cols = split(/;/,$_);
+	}
+	else {
+		my @data = split(/;/,$_);
+		@line{@cols} = @data;
+		my ($bsc,$abis,$free) = @line{qw/BSC ABIS FREE_TS/};
+		$free_ts{$bsc}{$abis} = $free;
+	}
+}
+close $ts_file;
+print "END:Retrieving free Abis TS info\n";
 print "Retrieving A925 Config info\n";
 my %a925 = ();
 my %a925_bsc = ();
@@ -441,8 +459,11 @@ while (<BSC>) {
 					$BTS{$omc}{$bsc}{$bts}{"BTS_GEN"} = (($mb4+$db4 > 0)? ($mb4+$db4).' M4M ':'').(($mb5+$db5 > 0)? ($mb5+$db5).' M5M ':'');
 				}
 				#abis counts
-				#$BTS{$omc}{$bsc}{$bts}{"Abis_Free"} = $BTS{$omc}{$bsc}{$bts}{"Abis_TS_Free"}.(($BTS{$omc}{$bsc}{$bts}{"2ndAbis_TS_Free"} =~ /\d+/)?','.$BTS{$omc}{$bsc}{$bts}{"2ndAbis_TS_Free"}:'');
-				$BTS{$omc}{$bsc}{$bts}{"Abis_Free"} = 'Eish!';
+				my @free_ts;
+				for (split('/',$BTS{$omc}{$bsc}{$bts}{'AbisTopology'})) {
+					push @free_ts, $free_ts{$bscName}{$_};
+				}
+				$BTS{$omc}{$bsc}{$bts}{"Abis_Free"} = join('/',@free_ts);
 				
 				if ($gen eq 'g2') {
 					print OUTFILE Tr(td([$bts,$sync,$relBts,@{$BTS{$omc}{$bsc}{$bts}}{qw/SITE_NAME CONTROL BTS_GEN FE_AMP QmuxTS QMuxAddress AbisTopology RANK DXX_FLAG Abis_Free TotalExtraTs/}])),"\n";
