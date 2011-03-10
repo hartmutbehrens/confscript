@@ -1,0 +1,252 @@
+<parameters>
+	<parameter name="CBC_OPERATOR" hmi_name="CBC_Operator" default="1" check="1" category="CBC Interworking"/>
+	<parameter name="CBC_PASSWORD" hmi_name="CBC_Password" default="1" check="1" category="CBC Interworking"/>
+	<parameter name="CBC_WINDOW" hmi_name="CBC_Window" default="1" check="1" category="CBC Interworking"/>
+	<parameter name="CBC_CallUserDataSel" hmi_name="Call_User_Data_Selector" default="1" check="1" category="CBC Interworking"/>
+	<parameter name="SMSCB_featureSet" hmi_name="SMSCB_Features_Set" default="1" check="1" category="CBC Interworking"/>
+	<parameter name="SMSCB_MODE" hmi_name="SMSCB_Mode" default="1" check="1" category="CBC Interworking"/>
+	<parameter name="SMSCB_Phase" hmi_name="SMSCB_Phase" default="1" check="1" category="CBC Interworking"/>
+	<parameter name="SMSCB_Recovery" hmi_name="SMSCB_Recovery" default="1" check="1" category="CBC Interworking"/>
+	<parameter name="SMSCB_STATE" hmi_name="SMSCB_State" default="1" check="1" category="CBC Interworking"/>
+	<parameter name="T_BIND_CNF" hmi_name="T_BIND_CNF" default="1" check="1" category="CBC Interworking"/>
+	<parameter name="CGI_REQD" hmi_name="CGI_REQUIRED" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="EN_CIRCUIT_GROUP" hmi_name="EN_CIRCUIT_GROUP" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="EnableUnequippedCircuit" hmi_name="EN_UNEQUIPPED_CIRCUIT" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="EN_SEND_CM3" hmi_name="Forward_CM_3" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="GSM_PHASE" hmi_name="GSM_PHASE" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="Ignore_2Mbit_Failure" hmi_name="IGNORE_2MBIT_FAILURE" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="ACmbMSCR" hmi_name="MSCR" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="Nbr_RESET_CIC_REP" hmi_name="NBR_RESET_CIC_REP" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="NbrResetRep" hmi_name="NBR_RESET_REP" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="NodeIdentifier" hmi_name="Node Identifier" default="1" check="0" category="MSC Interworking"/>
+	<parameter name="SendClassMarkEnquiry" hmi_name="Send_CM_Enquiry" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="StripByte5FromClassmark2" hmi_name="Strip_Octet_5_In_CM2" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="BssMapT1" hmi_name="T1" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="BssMapT13" hmi_name="T13" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="BssMapT19" hmi_name="T19" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="BssMapT20" hmi_name="T20" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="BssMapT4" hmi_name="T4" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="TimerTBurst" hmi_name="T_BURST" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="TimerTi" hmi_name="T_i" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="MTP3_WB_INTERWORKING" hmi_name="WHITE_BOOK_INTERWORKING" default="1" check="1" category="MSC Interworking"/>
+	<parameter name="AGprsSgsnr" hmi_name="SGSNR" default="1" check="0" category="SGSN Interworking"/>	
+	<parameter name="DWELL_TIME_STEP" hmi_name="DWELL_TIME_STEP" default="1" check="1" category="HO Control"/>
+	<parameter name="EN_INTERBAND_NEIGH" hmi_name="EN_INTERBAND_HO" default="1" check="1" category="HO Control"/>
+	<parameter name="EN_SEND_CHAN_MODE" hmi_name="EN_SEND_OLD_CHAN_MODE" default="1" check="1" category="HO Control"/>
+	<parameter name="EN_SEND_SPEECH_VERSION" hmi_name="EN_SEND_SPEECH_VER" default="1" check="1" category="HO Control"/>
+	<parameter name="H_MIN_DWELL_TIME" hmi_name="H_MIN_DWELL_TIME" default="1" check="1" category="HO Control"/>
+	<parameter name="L_MIN_DWELL_TIME" hmi_name="L_MIN_DWELL_TIME" default="1" check="1" category="HO Control"/>
+	<parameter name="EN_LOAD_OUTER" hmi_name="Load computation in outer zone" default="1" check="1" category="HO Control"/>
+	<parameter name="NbrPreferredCellsForHandover" hmi_name="NB_PREF_CELLS" default="1" check="1" category="HO Control"/>
+	<parameter name="NCI" hmi_name="NCI" default="1" check="1" category="HO Control"/>
+	<parameter name="PREFERRED_BAND" hmi_name="PREFERRED_BAND" default="1" check="1" category="HO Control"/>
+	<parameter name="" hmi_name="RESP_REQ" default="1" check="1" category="HO Control"/>
+	<parameter name="ROT" hmi_name="ROT" default="1" check="1" category="HO Control"/>
+	<parameter name="T3103" hmi_name="T3103" default="1" check="1" category="HO Control"/>
+	<parameter name="BssMapT7" hmi_name="T7" default="1" check="1" category="HO Control"/>
+	<parameter name="BssMapT8" hmi_name="T8" default="1" check="1" category="HO Control"/>
+	<parameter name="T9113" hmi_name="T9113" default="1" check="1" category="HO Control"/>
+	<parameter name="TchUsageInfoPeriod" hmi_name="TCH_INFO_PERIOD" default="1" check="1" category="HO Control"/>
+	<parameter name="TimerTHOReqdLost" hmi_name="T_HO_REQD_LOST" default="1" check="1" category="HO Control"/>
+	<parameter name="T_MS_CELL_REJ" hmi_name="T_MS_CELL_REJ" default="1" check="1" category="HO Control"/>	
+	<parameter name="EdrKeepAssignmentReqInQueue" hmi_name="EDR_QUEUING_MAINTAINED" default="1" check="1" category="External Directed Retry"/>
+	<parameter name="EdrSendAssignmentFailure" hmi_name="EDR_SEND_ASSIGN_FAIL" default="1" check="1" category="External Directed Retry"/>
+	<parameter name="EnableEdr" hmi_name="EN_EDR" default="1" check="1" category="External Directed Retry"/>
+	<parameter name="EN_BSS_OVRL_CLASS_BAR" hmi_name="AUTO_BAR_BSS_OVERLOAD" default="1" check="1" category="Overload and Barring"/>
+	<parameter name="AUT_BAR" hmi_name="AUTO_BAR_CELL" default="1" check="1" category="Overload and Barring"/>
+	<parameter name="EC_BAR" hmi_name="AUTO_BAR_EC" default="1" check="1" category="Overload and Barring"/>
+	<parameter name="AC_PRIORITY_LIST" hmi_name="High Priority Access Class Ordering P1 to P6" default="1" check="1" category="Overload and Barring"/>
+	<parameter name="Nbr AC 0 to 9 barred in one step" hmi_name="Nbr AC 0 to 9 barred in one step" default="1" check="0" category="Overload and Barring"/>
+	<parameter name="Nbr AC 0 to 9 unbarred in one step" hmi_name="Nbr AC 0 to 9 unbarred in one step" default="1" check="0" category="Overload and Barring"/>
+	<parameter name="Nbr AC 11 to 15 barred in one step" hmi_name="Nbr AC 11 to 15 barred in one step" default="1" check="0" category="Overload and Barring"/>
+	<parameter name="Nbr AC 11 to 15 unbarred in one step" hmi_name="Nbr AC 11 to 15 unbarred in one step" default="1" check="0" category="Overload and Barring"/>
+	<parameter name="BssMapT17" hmi_name="T17" default="1" check="1" category="Overload and Barring"/>
+	<parameter name="BssMapT18" hmi_name="T18" default="1" check="1" category="Overload and Barring"/>
+	<parameter name="T18_Overload" hmi_name="T18_OVERLOAD" default="1" check="1" category="Overload and Barring"/>
+	<parameter name="T_AUTOCLEANING_MEAS_REP" hmi_name="Autocleaning_Timer" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="DtxDownlink" hmi_name="DOWNLINK_DTX" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="DtxDownlinkHR" hmi_name="DOWNLINK_DTX_HR" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="EnableImmediateAssignmentReject" hmi_name="EN_IM_ASS_REJ" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="Forbid_dtxDownlink_NH_BCCH_F" hmi_name="FORBID_DTXD_NH_BCCH_F" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="ForceAssignmentReqQueuing" hmi_name="Forced_Queuing" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="Nbr_CLR_REQ" hmi_name="NB_CLR_REQ" default="1" check="1" category="General Timers and Procedures"/>
+	<paramter name="TimeTConnEst" hmi_name="Tconn_est" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="TimerTiar" hmi_name="T(iar)" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="TimerTias" hmi_name="T(ias)" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="TimerTrel" hmi_name="T(rel)" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="TimerTsst" hmi_name="T(sst)" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="TimerT11" hmi_name="T11" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="BssMapTimerT11Forced" hmi_name="T11_FORCED" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="T3101" hmi_name="T3101" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="T3107" hmi_name="T3107" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="T3109" hmi_name="T3109" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="T3111" hmi_name="T3111" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="T9104" hmi_name="T9104" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="T9105" hmi_name="T9105" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="T9110" hmi_name="T9110" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="T9112" hmi_name="T9112" default="1" check="1" category="General Timers and Procedures"/>
+	<parameter name="T_QHO" hmi_name="T_QHO" default="1" check="0" category="General Timers and Procedures"/>
+	<parameter name="BSS_CIPH_LIST" hmi_name="Ciphering Algorithm Priority" default="1" check="1" category="Ciphering"/>
+	<parameter name="AMR_FR_SUBSET" hmi_name="AMR_FR_SUBSET" default="1" check="1" category="AMR"/>
+	<parameter name="AMR_HR_SUBSET" hmi_name="AMR_HR_SUBSET" default="1" check="1" category="AMR"/>
+	<parameter name="AMR_START_MODE_FR" hmi_name="AMR_START_MODE_FR" default="1" check="1" category="AMR"/>
+	<parameter name="AMR_START_MODE_HR" hmi_name="AMR_START_MODE_HR" default="1" check="1" category="AMR"/>
+	<parameter name="DtxDownlinkAMR_FR" hmi_name="DOWNLINK_DTX_AMR_FR" default="1" check="1" category="AMR"/>
+	<parameter name="DtxDownlinkAMR_HR" hmi_name="DOWNLINK_DTX_AMR_HR" default="1" check="1" category="AMR"/>
+	<parameter name="FORBID_AMR_NS" hmi_name="FORBID_AMR_NS" default="1" check="1" category="AMR"/>
+	<parameter name="EgsmRrAllocStrategy" hmi_name="EGSM_RR_Alloc_Strategy" default="1" check="1" category="Resource Management"/>
+	<parameter name="TCH_PREMPT" hmi_name="EN_TCH_PREEMPT" default="1" check="1" category="Resource Management"/>
+	<parameter name="ACmbPlmnFrequencyBands" hmi_name="PLMN_FREQUENCY_BANDS" default="1" check="1" category="Resource Management"/>
+	<parameter name="ACmbDrxTimerMax" hmi_name="DRX_TIMER_MAX" default="1" check="1" category="GPRS General"/>
+	<parameter name="AGprsMaxPagingQueue" hmi_name="MAX_PAGING_QUEUE" default="1" check="1" category="GPRS General"/>
+	<parameter name="ACmbNetworkOperationMode" hmi_name="Network mode of operation" default="1" check="1" category="GPRS General"/>
+	<parameter name="AGprsETxEfficiencyPeriod" hmi_name="TX_EFFICIENCY_PERIOD" default="1" check="1" category="GPRS General"/>
+	<parameter name="AGprsTFlowCtrlCell" hmi_name="T_FLOW_CTRL_CELL" default="1" check="1" category="GPRS General"/>
+	<parameter name="AGprsTFlowCtrlMs" hmi_name="T_FLOW_CTRL_MS" default="1" check="1" category="GPRS General"/>
+	<parameter name="AGprsTPsiPacch" hmi_name="T_PSI_PACCH" default="1" check="1" category="GPRS General"/>
+	<parameter name="AGprsAterUsageThreshold" hmi_name="Ater_Usage_Threshold" default="1" check="1" category="GPRS Radio Resource Management"/>
+	<parameter name="AGprsEnDlLlcPduRerouting" hmi_name="EN_DL_LLC_PDU_REROUTING" default="1" check="1" category="GPRS Radio Resource Management"/>
+	<parameter name="AGprsEnFastUsfUlExtended" hmi_name="EN_FAST_USF_UL_EXTENDED" default="1" check="1" category="GPRS Radio Resource Management"/>
+	<parameter name="AGprsEnFullIrDl" hmi_name="EN_FULL_IR_DL" default="1" check="1" category="GPRS Radio Resource Management"/>
+	<parameter name="AGprsEnRaCapUpdate" hmi_name="EN_RA_CAP_UPDATE" default="1" check="1" category="GPRS Radio Resource Management"/>
+	<parameter name="AGprsGprsMultislotClassDefValue" hmi_name="GPRS_MULTISLOT_CLASS_DEF_VALUE" default="1" check="1" category="GPRS Radio Resource Management"/>
+	<parameter name="AGprsNAterTsMarginGpu" hmi_name="N_ATER_TS_MARGIN_GPU" default="1" check="1" category="GPRS Radio Resource Management"/>
+	<parameter name="AGprsTDelayedFinalPuan" hmi_name="T_DELAYED_FINAL_PUAN" default="1" check="1" category="GPRS Radio Resource Management"/>
+	<parameter name="AGprsTGchInactivity" hmi_name="T_GCH_INACTIVITY" default="1" check="1" category="GPRS Radio Resource Management"/>
+	<parameter name="AGprsTGchInactivityLast" hmi_name="T_GCH_INACTIVITY_LAST" default="1" check="1" category="GPRS Radio Resource Management"/>
+	<parameter name="AGprsTNetworkResponseTime" hmi_name="T_NETWORK_RESPONSE_TIME" default="1" check="1" category="GPRS Radio Resource Management"/>
+	<parameter name="AGprsCsHstDlLt" hmi_name="CS_HST_DL_LT" default="1" check="1" category="CS1 / CS2"/>
+	<parameter name="AGprsCsHstDlSt" hmi_name="CS_HST_DL_ST" default="1" check="1" category="CS1 / CS2"/>
+	<parameter name="AGprsCsHstUlLt" hmi_name="CS_HST_UL_LT" default="1" check="1" category="CS1 / CS2"/>
+	<parameter name="AGprsCsHstUlSt" hmi_name="CS_HST_UL_ST" default="1" check="1" category="CS1 / CS2"/>
+	<parameter name="AGprsCsQualDl12FhAck" hmi_name="CS_QUAL_DL_1_2_FH_ACK" default="1" check="1" category="CS1 / CS2"/>
+	<parameter name="AGprsCsQualDl12FhNack" hmi_name="CS_QUAL_DL_1_2_FH_NACK" default="1" check="1" category="CS1 / CS2"/>
+	<parameter name="AGprsCsQualDl12NfhAck" hmi_name="CS_QUAL_DL_1_2_NFH_ACK" default="1" check="1" category="CS1 / CS2"/>
+	<parameter name="AGprsCsQualDl12NfhNack" hmi_name="CS_QUAL_DL_1_2_NFH_NACK" default="1" check="1" category="CS1 / CS2"/>
+	<parameter name="AGprsCsQualUl12FhAck" hmi_name="CS_QUAL_UL_1_2_FH_ACK" default="1" check="1" category="CS1 / CS2"/>
+	<parameter name="AGprsCsQualUl12FhNack" hmi_name="CS_QUAL_UL_1_2_FH_NACK" default="1" check="1" category="CS1 / CS2"/>
+	<parameter name="AGprsCsQualUl12NfhAck" hmi_name="CS_QUAL_UL_1_2_NFH_ACK" default="1" check="1" category="CS1 / CS2"/>
+	<parameter name="AGprsCsQualUl12NfhNack" hmi_name="CS_QUAL_UL_1_2_NFH_NACK" default="1" check="1" category="CS1 / CS2"/>
+	<parameter name="AGprsTbfCsDl" hmi_name="TBF_CS_DL" default="1" check="1" category="CS1 / CS2"/>
+	<parameter name="AGprsTbfCsUl" hmi_name="TBF_CS_UL" default="1" check="1" category="CS1 / CS2"/>
+	<parameter name="AGprsCsQualDl23FhAck" hmi_name="CS_QUAL_DL_2_3_FH_ACK" default="1" check="1" category="CS2 / CS3"/>
+	<parameter name="AGprsCsQualDl23FhNack" hmi_name="CS_QUAL_DL_2_3_FH_NACK" default="1" check="1" category="CS2 / CS3"/>
+	<parameter name="AGprsCsQualDl23NfhAck" hmi_name="CS_QUAL_DL_2_3_NFH_ACK" default="1" check="1" category="CS2 / CS3"/>
+	<parameter name="AGprsCsQualDl23NfhNack" hmi_name="CS_QUAL_DL_2_3_NFH_NACK" default="1" check="1" category="CS2 / CS3"/>
+	<parameter name="AGprsCsQualUl23FhAck" hmi_name="CS_QUAL_UL_2_3_FH_ACK" default="1" check="1" category="CS2 / CS3"/>
+	<parameter name="AGprsCsQualUl23FhNack" hmi_name="CS_QUAL_UL_2_3_FH_NACK" default="1" check="1" category="CS2 / CS3"/>
+	<parameter name="AGprsCsQualUl23NfhAck" hmi_name="CS_QUAL_UL_2_3_NFH_ACK" default="1" check="1" category="CS2 / CS3"/>
+	<parameter name="AGprsCsQualUl23NfhNack" hmi_name="CS_QUAL_UL_2_3_NFH_NACK" default="1" check="1" category="CS2 / CS3"/>
+	<parameter name="AGprsCsBlerDl34" hmi_name="CS_BLER_DL_3_4" default="1" check="1" category="CS3 / CS4"/>
+	<parameter name="AGprsCsBlerDl43" hmi_name="CS_BLER_DL_4_3" default="1" check="1" category="CS3 / CS4"/>
+	<parameter name="AGprsCsQualDl34FhAck" hmi_name="CS_QUAL_DL_3_4_FH_ACK" default="1" check="1" category="CS3 / CS4"/>
+	<parameter name="AGprsCsQualDl34FhNack" hmi_name="CS_QUAL_DL_3_4_FH_NACK" default="1" check="1" category="CS3 / CS4"/>
+	<parameter name="AGprsCsQualDl34NfhAck" hmi_name="CS_QUAL_DL_3_4_NFH_ACK" default="1" check="1" category="CS3 / CS4"/>
+	<parameter name="AGprsCsQualDl34NfhNack" hmi_name="CS_QUAL_DL_3_4_NFH_NACK" default="1" check="1" category="CS3 / CS4"/>
+	<parameter name="AGprsCsQualUl34FhAck" hmi_name="CS_QUAL_UL_3_4_FH_ACK" default="1" check="1" category="CS3 / CS4"/>
+	<parameter name="AGprsCsQualUl34FhNack" hmi_name="CS_QUAL_UL_3_4_FH_NACK" default="1" check="1" category="CS3 / CS4"/>
+	<parameter name="AGprsCsQualUl34NfhAck" hmi_name="CS_QUAL_UL_3_4_NFH_ACK" default="1" check="1" category="CS3 / CS4"/>
+	<parameter name="AGprsCsQualUl34NfhNack" hmi_name="CS_QUAL_UL_3_4_NFH_NACK" default="1" check="1" category="CS3 / CS4"/>
+	<parameter name="AGprsCsSirDl34FhAck" hmi_name="CS_SIR_DL_3_4_FH_ACK" default="1" check="1" category="CS3 / CS4"/>
+	<parameter name="AGprsCsSirDl34FhNack" hmi_name="CS_SIR_DL_3_4_FH_NACK" default="1" check="1" category="CS3 / CS4"/>
+	<parameter name="AGprsCsSirDl34NfhAck" hmi_name="CS_SIR_DL_3_4_NFH_ACK" default="1" check="1" category="CS3 / CS4"/>
+	<parameter name="AGprsCsSirDl34NfhNack" hmi_name="CS_SIR_DL_3_4_NFH_NACK" default="1" check="1" category="CS3 / CS4"/>
+	<parameter name="AGprsCsSirHstDl" hmi_name="CS_SIR_HST_DL" default="1" check="1" category="CS3 / CS4"/>
+	<parameter name="AGprsTbfCs3BlerPeriod" hmi_name="TBF_CS3_BLER_PERIOD" default="1" check="1" category="CS3 / CS4"/>
+	<parameter name="AGprsTbfCs4BlerPeriod" hmi_name="TBF_CS4_BLER_PERIOD" default="1" check="1" category="CS3 / CS4"/>
+	<parameter name="AGprsEnFullIrDl" hmi_name="EN_IR_UL" default="1" check="1" category="E-GPRS"/>
+	<parameter name="AGprsEnResegmentationUl" hmi_name="EN_RESEGMENTATION_UL" default="1" check="1" category="E-GPRS"/>
+	<parameter name="AGprsTxEfficiencyPeriod" hmi_name="E_TX_EFFICIENCY_PERIOD" default="1" check="1" category="E-GPRS"/>
+	<parameter name="AGprsTbfMcsDl" hmi_name="TBF_MCS_DL" default="1" check="1" category="E-GPRS"/>
+	<parameter name="AGprsTbfMcsUl" hmi_name="TBF_MCS_UL" default="1" check="1" category="E-GPRS"/>
+	<parameter name="AGprsPdDlTbfDurationThr1" hmi_name="PD_DL_TBF_DURATION_THR_1" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdDlTbfDurationThr2" hmi_name="PD_DL_TBF_DURATION_THR_2" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdDlTbfDurationThr3" hmi_name="PD_DL_TBF_DURATION_THR_3" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdDlTbfDurationThr4" hmi_name="PD_DL_TBF_DURATION_THR_4" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdDlTbfDurationThr5" hmi_name="PD_DL_TBF_DURATION_THR_5" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdDlTbfDurationThr6" hmi_name="PD_DL_TBF_DURATION_THR_6" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdDlTbfDurationThr7" hmi_name="PD_DL_TBF_DURATION_THR_7" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdDlTbfDurationThr8" hmi_name="PD_DL_TBF_DURATION_THR_8" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdDlTbfDurationThr9" hmi_name="PD_DL_TBF_DURATION_THR_9" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdUlTbfDurationThr1" hmi_name="PD_UL_TBF_DURATION_THR_1" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdUlTbfDurationThr2" hmi_name="PD_UL_TBF_DURATION_THR_2" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdUlTbfDurationThr3" hmi_name="PD_UL_TBF_DURATION_THR_3" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdUlTbfDurationThr4" hmi_name="PD_UL_TBF_DURATION_THR_4" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdUlTbfDurationThr5" hmi_name="PD_UL_TBF_DURATION_THR_5" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdUlTbfDurationThr6" hmi_name="PD_UL_TBF_DURATION_THR_6" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdUlTbfDurationThr7" hmi_name="PD_UL_TBF_DURATION_THR_7" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdUlTbfDurationThr8" hmi_name="PD_UL_TBF_DURATION_THR_8" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdUlTbfDurationThr9" hmi_name="PD_UL_TBF_DURATION_THR_9" default="1" check="1" category="TBF Duration"/>
+	<parameter name="AGprsPdDlTbfVolumeThr1" hmi_name="PD_DL_TBF_VOLUME_THR_1" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdDlTbfVolumeThr2" hmi_name="PD_DL_TBF_VOLUME_THR_2" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdDlTbfVolumeThr3" hmi_name="PD_DL_TBF_VOLUME_THR_3" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdDlTbfVolumeThr4" hmi_name="PD_DL_TBF_VOLUME_THR_4" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdDlTbfVolumeThr5" hmi_name="PD_DL_TBF_VOLUME_THR_5" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdDlTbfVolumeThr6" hmi_name="PD_DL_TBF_VOLUME_THR_6" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdDlTbfVolumeThr7" hmi_name="PD_DL_TBF_VOLUME_THR_7" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdDlTbfVolumeThr8" hmi_name="PD_DL_TBF_VOLUME_THR_8" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdDlTbfVolumeThr9" hmi_name="PD_DL_TBF_VOLUME_THR_9" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdUlTbfVolumeThr1" hmi_name="PD_UL_TBF_VOLUME_THR_1" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdUlTbfVolumeThr2" hmi_name="PD_UL_TBF_VOLUME_THR_2" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdUlTbfVolumeThr3" hmi_name="PD_UL_TBF_VOLUME_THR_3" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdUlTbfVolumeThr4" hmi_name="PD_UL_TBF_VOLUME_THR_4" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdUlTbfVolumeThr5" hmi_name="PD_UL_TBF_VOLUME_THR_5" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdUlTbfVolumeThr6" hmi_name="PD_UL_TBF_VOLUME_THR_6" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdUlTbfVolumeThr7" hmi_name="PD_UL_TBF_VOLUME_THR_7" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdUlTbfVolumeThr8" hmi_name="PD_UL_TBF_VOLUME_THR_8" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdUlTbfVolumeThr9" hmi_name="PD_UL_TBF_VOLUME_THR_9" default="1" check="1" category="LLC volume"/>
+	<parameter name="AGprsPdDlPdchUnitAllocThr1" hmi_name="PD_DL_PDCH_UNIT_ALLOC_THR_1" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsPdDlPdchUnitAllocThr2" hmi_name="PD_DL_PDCH_UNIT_ALLOC_THR_2" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsPdDlPdchUnitAllocThr3" hmi_name="PD_DL_PDCH_UNIT_ALLOC_THR_3" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsPdDlPdchUnitAllocThr4" hmi_name="PD_DL_PDCH_UNIT_ALLOC_THR_4" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsPdDlPdchUnitAllocThr5" hmi_name="PD_DL_PDCH_UNIT_ALLOC_THR_5" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsPdDlPdchUnitAllocThr6" hmi_name="PD_DL_PDCH_UNIT_ALLOC_THR_6" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsPdDlPdchUnitAllocThr7" hmi_name="PD_DL_PDCH_UNIT_ALLOC_THR_7" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsPdDlPdchUnitAllocThr8" hmi_name="PD_DL_PDCH_UNIT_ALLOC_THR_8" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsPdDlPdchUnitAllocThr9" hmi_name="PD_DL_PDCH_UNIT_ALLOC_THR_9" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsPdUlPdchUnitAllocThr1" hmi_name="PD_UL_PDCH_UNIT_ALLOC_THR_1" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsPdUlPdchUnitAllocThr2" hmi_name="PD_UL_PDCH_UNIT_ALLOC_THR_2" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsPdUlPdchUnitAllocThr3" hmi_name="PD_UL_PDCH_UNIT_ALLOC_THR_3" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsPdUlPdchUnitAllocThr4" hmi_name="PD_UL_PDCH_UNIT_ALLOC_THR_4" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsPdUlPdchUnitAllocThr5" hmi_name="PD_UL_PDCH_UNIT_ALLOC_THR_5" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsPdUlPdchUnitAllocThr6" hmi_name="PD_UL_PDCH_UNIT_ALLOC_THR_6" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsPdUlPdchUnitAllocThr7" hmi_name="PD_UL_PDCH_UNIT_ALLOC_THR_7" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsPdUlPdchUnitAllocThr8" hmi_name="PD_UL_PDCH_UNIT_ALLOC_THR_8" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsPdUlPdchUnitAllocThr9" hmi_name="PD_UL_PDCH_UNIT_ALLOC_THR_9" default="1" check="1" category="PDCH Usage"/>
+	<parameter name="AGprsBestEffortPriority" hmi_name="BEST_EFFORT_PRIORITY" default="1" check="1" category="QoS"/>
+	<parameter name="AGprsEnPfcFeature" hmi_name="EN_PFC_FEATURE" default="1" check="1" category="QoS"/>
+	<parameter name="AGprsHighPrecedenceBackgroundPriority" hmi_name="HIGH_PRECEDENCE_BACKGROUND_PRIORITY" default="1" check="1" category="QoS"/>
+	<parameter name="AGprsHighPrecedenceThp1Priority" hmi_name="HIGH_PRECEDENCE_THP1_PRIORITY" default="1" check="1" category="QoS"/>
+	<parameter name="AGprsHighPrecedenceThp2Priority" hmi_name="HIGH_PRECEDENCE_THP2_PRIORITY" default="1" check="1" category="QoS"/>
+	<parameter name="AGprsHighPrecedenceThp3Priority" hmi_name="HIGH_PRECEDENCE_THP3_PRIORITY" default="1" check="1" category="QoS"/>
+	<parameter name="AGprsLowPrecedenceBackgroundPriority" hmi_name="LOW_PRECEDENCE_BACKGROUND_PRIORITY" default="1" check="1" category="QoS"/>
+	<parameter name="AGprsLowPrecedenceThp1Priority" hmi_name="LOW_PRECEDENCE_THP1_PRIORITY" default="1" check="1" category="QoS"/>
+	<parameter name="AGprsLowPrecedenceThp2Priority" hmi_name="LOW_PRECEDENCE_THP2_PRIORITY" default="1" check="1" category="QoS"/>
+	<parameter name="AGprsLowPrecedenceThp3Priority" hmi_name="LOW_PRECEDENCE_THP3_PRIORITY" default="1" check="1" category="QoS"/>
+	<parameter name="AGprsNormalPrecedenceBackgroundPriority" hmi_name="NORMAL_PRECEDENCE_BACKGROUND_PRIORITY" default="1" check="1" category="QoS"/>
+	<parameter name="AGprsNormalPrecedenceThp1Priority" hmi_name="NORMAL_PRECEDENCE_THP1_PRIORITY" default="1" check="1" category="QoS"/>
+	<parameter name="AGprsNormalPrecedenceThp2Priority" hmi_name="NORMAL_PRECEDENCE_THP2_PRIORITY" default="1" check="1" category="QoS"/>
+	<parameter name="AGprsNormalPrecedenceThp3Priority" hmi_name="NORMAL_PRECEDENCE_THP3_PRIORITY" default="1" check="1" category="QoS"/>
+	<parameter name="AGprsPfcT6" hmi_name="PFC_T6" default="1" check="1" category="QoS"/>
+	<parameter name="AGprsPfcT8" hmi_name="PFC_T8" default="1" check="1" category="QoS"/>
+	<parameter name="AGprsSmsPriority" hmi_name="SMS_PRIORITY" default="1" check="1" category="QoS"/>
+	<parameter name="AGprsTMaxStreamingBuffering" hmi_name="T_MAX_STREAMING_BUFFERING" default="1" check="1" category="QoS"/>
+	<parameter name="Cgi3gReqd" hmi_name="CGI_3G_REQUIRED" default="1" check="1" category="UMTS"/>
+	<parameter name="ACmbEn2gTo3gCellReselection" hmi_name="EN_2G_TO_3G_CELL_RESELECTION" default="1" check="1" category="UMTS"/>
+	<parameter name="FDD_ARFCN_List" hmi_name="FDD_ARFCN_1" default="1" check="1" category="UMTS"/>
+	<parameter name="FDD_ARFCN_List" hmi_name="FDD_ARFCN_2" default="1" check="1" category="UMTS"/>
+	<parameter name="FDD_ARFCN_List" hmi_name="FDD_ARFCN_3" default="1" check="1" category="UMTS"/>
+	<parameter name="T3121" hmi_name="T3121" default="1" check="1" category="UMTS"/>
+	<parameter name="AGprsArcSizeFactor" hmi_name="ARC_SIZE_FACTOR" default="1" check="1" category="LCS"/>
+	<parameter name="ACmbEnLcs" hmi_name="EN_LCS" default="1" check="1" category="LCS"/>
+	<parameter name="AGprsEnSagi" hmi_name="EN_SAGI" default="1" check="1" category="LCS"/>
+	<parameter name="AGprsMaxRadiusFactor" hmi_name="MAX_RADIUS_FACTOR" default="1" check="1" category="LCS"/>
+	<parameter name="AGprsMinRadiusFactor" hmi_name="MIN_RADIUS_FACTOR" default="1" check="1" category="LCS"/>
+	<parameter name="AGprsTLcsDelayTolerant" hmi_name="T_LCS_Delay_Tolerant" default="1" check="1" category="LCS"/>
+	<parameter name="AGprsTLcsLowDelay" hmi_name="T_LCS_Low_Delay" default="1" check="1" category="LCS"/>
+	<parameter name="T_Loc_abort" hmi_name="T_Loc_abort" default="1" check="1" category="LCS"/>
+	<parameter name="T_Location" hmi_name="T_Location" default="1" check="1" category="LCS"/>
+	<parameter name="T_Location_Longer" hmi_name="T_Location_Longer" default="1" check="1" category="LCS"/>
+	<parameter name="AGprsTRrlpDelayTolerant" hmi_name="T_RRLP_Delay_Tolerant" default="1" check="1" category="LCS"/>
+	<parameter name="AGprsTRrlpLowDelay" hmi_name="T_RRLP_Low_Delay" default="1" check="1" category="LCS"/>
+</parameters>
