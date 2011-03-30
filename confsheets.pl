@@ -276,7 +276,7 @@ if (-e $config{"OUTPUT_CSV"}."gpu.csv") {
 			$mfsName =~ s/\"//g;
 			$bscName =~ s/\"//g;
 			$nsei{$bscName} = $line{'NSEIS'};
-			@{$gpu{$omc}{$mfsName}{$bscName}}{qw/GPUS NSEIS NSVCS MFS_ID Gb R_SR/} = @line{qw/GPUS NSEIS NSVCS MFS_ID Gb R_SR/};
+			@{$gpu{$omc}{$mfsName}{$bscName}}{qw/GPUS ATERPS NSEIS NSVCS MFS_ID Gb R_SR/} = @line{qw/GPUS ATERPS NSEIS NSVCS MFS_ID Gb R_SR/};
 		}
 	}
 	close(GPU) || die "Cannot close gpu.csv: $!\n";
@@ -964,9 +964,9 @@ foreach my $omc (keys %gpu) {
 			
 		print FILE start_table({-align=>"CENTER", -border=>0,-width=>(TABLE_WIDTH), -cellpadding=>1, -cellspacing=>1}),"\n";
 		print FILE caption("BSC's connected to MFS"), "\n";
-		print FILE Tr(th(["BSC NAME","GPU's","NSEI's","NSVC's per NSEI","Gb Bandwidth","GPU Rack/Subrack"])),"\n";
+		print FILE Tr(th(["BSC NAME","GPU's","Ater-PS", "NSEI's","NSVC's per NSEI","Gb Bandwidth","GPU Rack/Subrack"])),"\n";
 		foreach my $bscName (sort keys %{$gpu{$omc}{$mfsName}}) {
-			print FILE Tr(td([$bscName,@{$gpu{$omc}{$mfsName}{$bscName}}{qw/GPUS NSEIS NSVCS Gb R_SR/}])),"\n";	
+			print FILE Tr(td([$bscName,@{$gpu{$omc}{$mfsName}{$bscName}}{qw/GPUS ATERPS NSEIS NSVCS Gb R_SR/}])),"\n";	
 		}
 		print FILE end_table;
 		close FILE;
