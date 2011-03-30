@@ -56,7 +56,6 @@ my %mfsConfig = ();
 my %mfsName = ();
 my %nse_to_bsc = ();
 my %toBsc = ();
-my %posn = ();
 foreach my $omc (keys %rnlBsc) {
 	foreach my $id (keys %{$rnlBsc{$omc}}) {		
 		@{$mfsName{$omc}{$id}}{qw/MFS_NAME MFS_ID BSC_NAME/} = ($rnlMfs{$omc}{$rnlBsc{$omc}{$id}{'RnlRelatedMFS'}}{"UserLabel"},@{$rnlBsc{$omc}{$id}}{qw/RnlRelatedMFS UserLabel/});
@@ -81,10 +80,9 @@ foreach my $omc (keys %ttp) {
 		$toBsc{$omc}{$mfsName{$omc}{$bsc}{'MFS_ID'}}{$rack}{$subrack}{$gpu} = $bsc;
 		#$port = $ttpNum % 256;
 		if ( ($ttp{$omc}{$id}{'AdministrativeState'} eq 'unlocked') && ($ttp{$omc}{$id}{'TTPtype'} eq 'atermux') ) {
-			$mfsConfig{$omc}{$bsc}{'GPU'}{$gpu}++ ;
+			$mfsConfig{$omc}{$bsc}{'GPU'}{join(',',$rack,$subrack,$gpu)}++ ;
 			$mfsConfig{$omc}{$bsc}{'TTP'}{$ttpNum}++;	
 		}
-		$posn{$omc}{$bsc}{$gpu} = 'R '.$rack.', SR '.$subrack;
 	}
 }
 
@@ -117,17 +115,18 @@ foreach my $omc (keys %mlNsvc) {
 
 #spool GPU CSV output
 open(GPU,">".$config{"OUTPUT_CSV"}."gpu.csv") || die "Cannot open gpu.csv: $!\n";
-print GPU "OMC_ID;MFS;MFS_ID;BSC;GPUS;ATERPS;NSEIS;NSVCS;MFSTTPS;Gb;R_SR\n";
+print GPU "OMC_ID;MFS;MFS_ID;BSC;GPUS;ATERPS;NSEIS;NSVCS;MFSTTPS;Gb\n";
 foreach my $omc (sort keys %mfsConfig) {
 	foreach my $bsc (sort keys %{$mfsConfig{$omc}}) {
-		my @gpu = sort {$a <=> $b} keys %{$mfsConfig{$omc}{$bsc}{'GPU'}};
+		my @gpu = sort {$a cmp $b} keys %{$mfsConfig{$omc}{$bsc}{'GPU'}};
 		my @aterps = @{$mfsConfig{$omc}{$bsc}{'GPU'}}{@gpu};
-		my $r_sr = join(' / ',map('GPU '.$_.': '.$posn{$omc}{$bsc}{$_},@gpu));
+		@gpu = map((split(',',$_))[2],@gpu);
+		
 		my @ttp = sort keys %{$mfsConfig{$omc}{$bsc}{'TTP'}};
 		my @nse = sort {$a <=> $b} keys %{$mfsConfig{$omc}{$bsc}{'NSE'}};
 		my @vcs = map($_.':'.join(',',keys %{$mfsConfig{$omc}{$bsc}{'NSE'}{$_}}),@nse);
 		my @gb = map($mfsConfig{$omc}{$bsc}{'Gb'}{$_}.' x '.$_.'TS ('.($_*64).'kbit/s)',keys %{$mfsConfig{$omc}{$bsc}{'Gb'}});
-		print GPU $omc.';'.join(';',@{$mfsName{$omc}{$bsc}}{qw/MFS_NAME MFS_ID BSC_NAME/}).';'.join(';',join(',',@gpu),join(',',@aterps),join(',',@nse),join(',',@vcs),join(',',@ttp),join(',',@gb),$r_sr)."\n";
+		print GPU $omc.';'.join(';',@{$mfsName{$omc}{$bsc}}{qw/MFS_NAME MFS_ID BSC_NAME/}).';'.join(';',join(',',@gpu),join(',',@aterps),join(',',@nse),join(',',@vcs),join(',',@ttp),join(',',@gb))."\n";
 	}
 }
 close GPU || die "Cannot close gpu.csv: $!\n";
