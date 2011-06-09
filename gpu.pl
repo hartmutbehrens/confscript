@@ -23,13 +23,19 @@ my %rnlMfs = (
 	"UserLabel"				=>1
 	);
 
+#my %ttp = (
+#	"Alcatel2MbTTPInstanceIdentifier"	=>1,
+#	"AdministrativeState"	=>1,
+#	"AlignmentStatus" => 1,
+#	"TTPtype" => 1,
+#	"Mfs2MbTTP"	=>1
+#	);
 my %ttp = (
-	"Alcatel2MbTTPInstanceIdentifier"	=>1,
-	"AdministrativeState"	=>1,
-	"AlignmentStatus" => 1,
-	"TTPtype" => 1,
-	"Mfs2MbTTP"	=>1
-	);
+	"AGprs2MbTTPInstanceIdentifier" => 1,
+	"AGprsCrc4Status" => 1,
+	"AGprsTsUsed" => 1,
+	"AGprsRemoteEquipment" => 1
+);
 	
 my %mlBearer = (
 	"AGprsBearerChannelInstanceIdentifier" => 1,
@@ -64,14 +70,16 @@ foreach my $omc (keys %rnlBsc) {
 
 #print Dumper(\%mfsName);
 
-loadACIE("Alcatel2MbTTP","eml",\%ttp);
+#loadACIE("Alcatel2MbTTP","eml",\%ttp);
+loadACIE("AGprs2MbTTP","ml",\%ttp);
 my ($bsc,$ttpNum,$gpu,$rack,$subrack,$port);
 foreach my $omc (keys %ttp) {
 	foreach my $id (keys %{$ttp{$omc}}) {
-		my $mfsttp = $ttp{$omc}{$id}{"Mfs2MbTTP"};
-		next if ($mfsttp =~ /unknown\:NULL/i);
-		($bsc) = ($id =~ /amecID\s(\d+)/);
-		($ttpNum) = ($mfsttp =~ /ttp_number\s(\d+)/);
+		next if $ttp{$omc}{$id}{'AGprsTsUsed'} eq '{}';
+		my ($ttpNum) = ($id =~ /moiRdn\s(\d+)/);
+		next if $ttp{$omc}{$id}{'AGprsRemoteEquipment'} =~ /sgsn/;
+		($bsc) = ($ttp{$omc}{$id}{'AGprsRemoteEquipment'} =~ /bssFunctionId\s(\d+)/);
+		
 		$gpu = ($ttpNum/256) % 256;
 		$rack = ($ttpNum/(256*256*256)) % 256;
 		$subrack = ($ttpNum/(256*256)) % 256;
@@ -79,10 +87,10 @@ foreach my $omc (keys %ttp) {
 		print "$mfsName{$omc}{$bsc}{'MFS_ID'}\n";
 		$toBsc{$omc}{$mfsName{$omc}{$bsc}{'MFS_ID'}}{$rack}{$subrack}{$gpu} = $bsc;
 		#$port = $ttpNum % 256;
-		if ( ($ttp{$omc}{$id}{'AdministrativeState'} eq 'unlocked') && ($ttp{$omc}{$id}{'TTPtype'} eq 'atermux') ) {
+		#if ( ($ttp{$omc}{$id}{'AdministrativeState'} eq 'unlocked') && ($ttp{$omc}{$id}{'TTPtype'} eq 'atermux') ) {
 			$mfsConfig{$omc}{$bsc}{'GPU'}{join(',',$rack,$subrack,$gpu)}++ ;
 			$mfsConfig{$omc}{$bsc}{'TTP'}{$ttpNum}++;	
-		}
+		#}
 	}
 }
 
